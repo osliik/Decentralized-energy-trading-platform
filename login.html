@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Вход - Energy Trading Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" id="nav-home">Главная</a>
+      <a href="/registration.html" id="nav-register">Регистрация</a>
+      <a href="/login.html" id="nav-login">Вход</a>
+      <a href="/profile.html" id="nav-profile">Профиль</a>
+      <a href="#" id="nav-logout" onclick="logout()">Выход</a>
+    </nav>
+  </header>
+
+  <div id="content" class="fade-in">
+    <h2>Вход</h2>
+    <button class="connect-button" onclick="connectWallet()">Подключить MetaMask</button>
+    <p class="message" id="login-message"></p>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Energy Trading Platform</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

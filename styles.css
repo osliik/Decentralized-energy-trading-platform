@@ -1,0 +1,337 @@
+/* Устанавливаем шрифт для всего сайта */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #333;
+  text-decoration: none;
+  padding: 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #2563eb;
+}
+
+/* Стили для секции hero */
+.hero {
+  background-image: url('https://cdn.forbes.ru/files/gallery_images/mcrs_webwww20-20.jpg__1616670057__20148.jpg'); /* Укажите правильный путь к вашему изображению */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Темный оверлей для улучшения читаемости текста */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}
+
+#content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  flex: 1 0 auto;
+}
+
+#content h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Стили для форм */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="number"],
+form input[type="email"],
+select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="number"]:focus,
+form input[type="email"]:focus,
+select:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #1e40af;
+}
+
+.message {
+  text-align: center;
+  color: red;
+  margin-top: 20px;
+}
+
+/* Стили для карточек предложений */
+.listing {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.listing:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.listing p {
+  margin: 5px 0;
+}
+
+/* Стили для формы создания предложения */
+#provider-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#provider-section .form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#provider-section input,
+#provider-section select {
+  width: 250px; /* Увеличенная ширина для всех полей */
+  padding: 12px 15px;
+  margin-right: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#provider-section label {
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: block;
+  text-align: center;
+}
+
+#provider-section input:focus,
+#provider-section select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+#provider-section .form-group select {
+  margin-right: 0;
+}
+
+#provider-section button {
+  display: block;
+  width: 250px;
+  padding: 15px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+#provider-section button:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}
+
+
+/* Анимация плавного появления */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInAnimation 1s forwards;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Стили для кнопок */
+button, .cta-button {
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+button:hover, .cta-button:hover {
+  opacity: 0.9;
+}
+
+/* Стили для футера */
+footer {
+  background-color: #454545;
+  color: #6b7280;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Медиазапрос для экранов меньше 768px */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+
+  #provider-section input,
+  #provider-section select {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+/* Дополнительные стили для кнопки MetaMask */
+.connect-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff9900;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.connect-button:hover {
+  background-color: #e68a00;
+}

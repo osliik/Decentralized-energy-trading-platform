@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Профиль - Energy Trading Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Подключаем Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Подключаем Web3.js -->
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" id="nav-home">Главная</a>
+      <a href="/registration.html" id="nav-register">Регистрация</a>
+      <a href="/login.html" id="nav-login">Вход</a>
+      <a href="/profile.html" id="nav-profile">Профиль</a>
+      <a href="#" id="nav-logout" onclick="logout()">Выход</a>
+    </nav>
+  </header>
+
+  <div id="content" class="fade-in">
+    <div id="user-info">
+      <p id="user-name">Загрузка...</p>
+      <p id="user-role"></p>
+      <p id="energy-balance"></p>
+    </div>
+
+    <!-- Раздел для поставщиков -->
+    <div id="provider-section" style="display: none;">
+      <h2>Ваши предложения</h2>
+      <div id="my-listings"></div>
+
+      <h2>Создать новое предложение</h2>
+      <input type="number" id="energy-amount" placeholder="Количество энергии" />
+      <input type="text" id="price-per-unit" placeholder="Цена за единицу (ETH)" />
+      <label for="energy-type">Тип энергии:</label>
+      <select id="energy-type">
+        <option value="Солнечная">Солнечная</option>
+        <option value="Ветровая">Ветровая</option>
+        <option value="Гидро">Гидро</option>
+        <option value="Геотермальная">Геотермальная</option>
+      </select>
+      <button onclick="createListing()">Создать предложение</button>
+      <p class="message" id="provider-message"></p>
+    </div>
+
+    <!-- Раздел для потребителей -->
+    <div id="consumer-section" style="display: none;">
+      <h2>Рынок энергии</h2>
+      <div id="listings"></div>
+      <p class="message" id="consumer-message"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Energy Trading Platform</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

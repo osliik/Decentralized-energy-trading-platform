@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Energy Trading Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Подключаем Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Подключаем Web3.js -->
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" id="nav-home">Главная</a>
+      <a href="/registration.html" id="nav-register">Регистрация</a>
+      <a href="/login.html" id="nav-login">Вход</a>
+      <a href="/profile.html" id="nav-profile">Профиль</a>
+      <a href="#" id="nav-logout" onclick="logout()">Выход</a>
+    </nav>
+  </header>
+
+  <!-- Новый раздел hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Добро пожаловать на Energy Trading Platform!</h1>
+      <p>Платформа децентрализованной торговли энергией позволяет пользователям покупать и продавать избыточную энергию напрямую без посредников.</p>
+      <a href="/registration.html" class="cta-button">Начать сейчас</a>
+    </div>
+  </section>
+
+  <div id="content" class="fade-in">
+    <h2>Доступные предложения</h2>
+    <div id="all-listings"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Energy Trading Platform</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
