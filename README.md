@@ -32,11 +32,6 @@ This app allows you to add a new offer which parameters was written in solidity 
 ![Uploading image.png…]()
 * Now there you can see the uniqe ID for youre model
 
-### Authors
-
- Toleugazy Daulet 
- [@Toleugazy Daulet](https://www.linkedin.com/feed/)
-
 
 ## License
 
